@@ -17,7 +17,7 @@ const store = createStore( reducer, applyMiddleware(thunk, logger));
 ReactDOM.render(
   <Provider store={store}>
     <React.StrictMode>
-      <App />
+      <App className={'app'}/>
     </React.StrictMode>
   </Provider>,
   document.getElementById('root')

@@ -1,5 +1,10 @@
 export const initialState = {
-    subtitle: 'subtitle'
+    subtitle: 'subtitle',
+    images: []
+}
+
+export const sendIt = () => {
+    
 }
 
 export const reducer = (state = initialState, action) => {
