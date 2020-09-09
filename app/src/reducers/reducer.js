@@ -1,6 +1,13 @@
+import {
+    SENDIT_START,
+    SENDIT_SUCCESS,
+    SENDIT_FAILURE
+  } from '../actions/actions';
+
 export const initialState = {
-    subtitle: 'subtitle',
-    images: []
+    images: [],
+    error: '',
+    isFetching: true
 }
 
 export const sendIt = () => {

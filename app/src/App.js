@@ -19,8 +19,7 @@ function App(props) {
         <img src={nasaLogo} alt="nasa logo"/>
         <h1>+ gram = NASAgram</h1>
       </header>
-      <img src={orbitLoad} alt="loading..."/>
-      <h2>{props.subtitle}</h2>
+      { props.isFetching ? <img src={orbitLoad} alt="loading..."/> : null }
       <button onClick={handleClick}>SEND IT</button>
     </div>
   );
@@ -28,7 +27,7 @@ function App(props) {
 
 function mapStateToProps(state) {
   return {
-    subtitle: state.subtitle
+    isFetching: state.isFetching
   }
 }
 
