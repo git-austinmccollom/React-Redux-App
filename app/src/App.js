@@ -7,12 +7,15 @@ import orbitLoad from './images/orbit-load.webp'
 //redux
 import { connect } from 'react-redux';
 
-const handleClick = (evt) => {
-  console.log(evt.target)
-}
-
+//actions
+import { sendIt } from './actions/actions'
 
 function App(props) {
+  
+  const handleClick = (evt) => {
+    console.log(evt.target)
+    props.sendIt();
+  }
   return (
     <div className={'page-wrapper'}>
       <header>
@@ -31,4 +34,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect( mapStateToProps, {})(App);
+export default connect( mapStateToProps, { sendIt })(App);
