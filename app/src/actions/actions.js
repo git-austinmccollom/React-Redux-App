@@ -1,0 +1,1 @@
+const BASE_URL = 'https://api.nasa.gov/planetary/apod?api_key=1nZRJTT4osWq35OiAIXOHJsMaxERpf42eUdEu52d';
