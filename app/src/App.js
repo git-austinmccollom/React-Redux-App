@@ -29,7 +29,7 @@ function App(props) {
       { props.isFetching ? <img src={orbitLoad} alt="loading..."/> : null }
       {
         props.images.map( (img) => {
-          return <Post content={img} />
+          return <Post key={new Date()} imageObject={img} />
         })
       }
       <button onClick={handleClick}>SEND IT</button>

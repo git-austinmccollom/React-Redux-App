@@ -10,10 +10,6 @@ export const initialState = {
     isFetching: false
 }
 
-export const sendIt = () => {
-    
-}
-
 export const reducer = (state = initialState, action) => {
     switch (action.type) {
         case SENDIT_START:
