@@ -16,6 +16,13 @@ import Post from './components/Post';
 
 function App(props) {
   
+  // let counter = 0;
+  // const day = date.format( new Date(), 'YYYY-MM-DD');
+
+  // let pastDay = day.getDate() - counter;
+  // day.setDate(pastDay);
+  // console.log(day, pastday)
+
   const handleClick = (evt) => {
     console.log(evt.target)
     props.sendIt();
