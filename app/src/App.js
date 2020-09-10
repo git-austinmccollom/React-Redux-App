@@ -10,6 +10,10 @@ import { connect } from 'react-redux';
 //actions
 import { sendIt } from './actions/actions'
 
+//components
+import Post from './components/Post';
+
+
 function App(props) {
   
   const handleClick = (evt) => {
@@ -23,6 +27,11 @@ function App(props) {
         <h1>+ gram = NASAgram</h1>
       </header>
       { props.isFetching ? <img src={orbitLoad} alt="loading..."/> : null }
+      {
+        props.images.map( (img) => {
+          return <Post content={img} />
+        })
+      }
       <button onClick={handleClick}>SEND IT</button>
     </div>
   );
@@ -30,7 +39,8 @@ function App(props) {
 
 function mapStateToProps(state) {
   return {
-    isFetching: state.isFetching
+    isFetching: state.isFetching,
+    images: state.images
   }
 }
 
